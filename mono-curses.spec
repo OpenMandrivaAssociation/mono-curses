@@ -1,9 +1,9 @@
-%define name monotorrent-curses
+%define name mono-curses
 %define version 0.2
 %define svn r128192
 %define release %mkrel 0.%svn.1
 
-Summary: Bittorrent client for Mono with a simple curses UI
+Summary: Mono library for writing simple curses UIs
 Name: %{name}
 Version: %{version}
 Release: %{release}
@@ -13,21 +13,26 @@ Source0: %{name}-%{svn}.tar.bz2
 Source1: constants.cs
 Patch: monotorrent-curses-makefile.patch
 License: MIT
-Group: Networking/File transfer
+Group: Development/Other
 Url: http://www.mono-project.com/MonoCurses
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mono-devel
 BuildRequires: libncurses-devel
 BuildRequires: monodoc
+Provides: monotorrent-curses
+Obsoletes: monotorrent-curses
 
 %description
-This is a simple Bittorrent client with a curses UI based on Monotorrent.
+This is a library for writing curses UIs in Mono.
 
 %package doc
 Summary: Development documentation for %name
 Group: Development/Other
 Requires(post): mono-tools >= 1.1.9
 Requires(postun): mono-tools >= 1.1.9
+Provides: monotorrent-curses-doc
+Obsoletes: monotorrent-curses-doc
+
 
 %description doc
 This package contains the API documentation for the %name in
