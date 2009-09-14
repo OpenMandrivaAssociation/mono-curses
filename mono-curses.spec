@@ -1,7 +1,7 @@
 %define name mono-curses
 %define version 0.2
 %define svn r128192
-%define release %mkrel 0.%svn.1
+%define release %mkrel 0.%svn.2
 
 Summary: Mono library for writing simple curses UIs
 Name: %{name}
