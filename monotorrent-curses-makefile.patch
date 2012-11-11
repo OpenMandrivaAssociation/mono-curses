@@ -1,0 +1,19 @@
+Index: Makefile
+===================================================================
+--- Makefile	(Revision 128192)
++++ Makefile	(Arbeitskopie)
+@@ -71,10 +71,12 @@
+ install: all
+ 	mkdir -p $(prefix)/bin
+ 	mkdir -p $(prefix)/lib/mono-curses
+-	gacutil -i mono-curses.dll -package mono-curses
++	gacutil -i mono-curses.dll -package mono-curses -root $(prefix)/lib
+ 	cp libmono-curses* $(prefix)/lib/
++	mkdir -p  $(prefix)/lib/pkgconfig
+ 	cp mono-curses.pc $(prefix)/lib/pkgconfig
+-	cp mono-curses.tree mono-curses.zip mono-curses.source  `pkg-config --variable sourcesdir monodoc`
++	mkdir -p $(prefix)/lib/monodoc/sources
++	cp mono-curses.tree mono-curses.zip mono-curses.source $(prefix)/lib/monodoc/sources
+ 
+ config.make:
+ 	echo You must run configure first
