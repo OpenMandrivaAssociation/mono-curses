@@ -6,7 +6,7 @@ Version:	0.2
 Release:	0.%{svn}.6
 License:	MIT
 Group:		Development/Other
-Url:		http://www.mono-project.com/MonoCurses
+Url:		https://www.mono-project.com/MonoCurses
 Source0:	%{name}-%{svn}.tar.bz2
 #gw this is automatically generated at build time by attrib, but this does
 # not work in iurt
