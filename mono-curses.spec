@@ -13,6 +13,11 @@ Source0:	%{name}-%{svn}.tar.bz2
 Source1:	constants.cs
 Patch:		monotorrent-curses-makefile.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	mono-devel
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	monodoc
